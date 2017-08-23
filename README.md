@@ -14,4 +14,4 @@ https://github.com/pulseaudio/pulseaudio/blob/master/src/utils/pactl.
 
 i3blocks: https://github.com/vivien/i3blocks
 
-
+awesome font: http://fontawesome.io
