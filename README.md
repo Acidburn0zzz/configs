@@ -11,3 +11,7 @@ i3lock: https://github.com/i3/i3lock
 
 pactl: 
 https://github.com/pulseaudio/pulseaudio/blob/master/src/utils/pactl.
+
+i3blocks: https://github.com/vivien/i3blocks
+
+
