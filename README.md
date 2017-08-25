@@ -15,3 +15,6 @@ https://github.com/pulseaudio/pulseaudio/blob/master/src/utils/pactl.
 i3blocks: https://github.com/vivien/i3blocks
 
 awesome font: http://fontawesome.io
+
+
+![Bild Text](http://kamprad.net/wp-content/uploads/2016/02/Bildschirmfoto-vom-2017-08-25-03-41-04.png)
