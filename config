@@ -85,7 +85,6 @@ bindsym $mod+d focus child
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
-
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
@@ -152,11 +151,13 @@ exec --no-startup-id conky -c /home/killajoe/.config/i3/Gotham
 for_window [class="Pamac-manager" instance="pamac-manager"] floating enable
 #for_window [class="Gnome-terminal" instance="gnome-terminal"] floating enable
 #for_window [class="Gedit" instance="gedit"] floating enable
+for_window [class="VirtualBox" instance="VirtualBox"] floating enable
 
 #load nvidia-settings
 exec nvidia-settings --config /home/killajoe/.nvidia-settings-rc --load-config-only
 
 #transparency
+#exec --no-startup-id compton -cCfb
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 
 #exit-menu
@@ -332,7 +333,7 @@ bindsym F12 exec rofi -show window -lines 3 -eh 2 -width 100 -padding 800 " -bw 
 
 
 # move any window to the current workspace
-#bindsym F8 exec python3 ~/.config/i3/quickswitch-for-i3/quickswitch.py -m
+bindsym F8 exec python3 ~/.config/i3/quickswitch-for-i3/quickswitch.py -m
 
 
 popup_during_fullscreen leave_fullscreen
