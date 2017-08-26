@@ -35,5 +35,5 @@ xfce4-terminal: https://github.com/xfce-mirror/xfce4-terminal
 lollypop: https://github.com/gnumdk/lollypop
 
 ---
-All scripts and ciónfigs are done by remixing other configs, to use them you need to change directories inside.
+All scripts and configs are done by remixing other configs, to use them you need to change directories inside.
 And Just as they are, without any guarantee!!!
