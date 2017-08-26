@@ -24,6 +24,16 @@ awesome font: http://fontawesome.io
 
 conky: https://github.com/brndnmtthws/conky
 
+pamac: https://github.com/manjaro/pamac
+
+vivaldi: https://vivaldi.com/download/
+
+geary: https://github.com/GNOME/geary
+
+xfce4-terminal: https://github.com/xfce-mirror/xfce4-terminal
+
+lollypop: https://github.com/gnumdk/lollypop
 
 ---
-All scripts and ciónfigs are done by remixing other configs, to use them you need to change directories inside....
+All scripts and ciónfigs are done by remixing other configs, to use them you need to change directories inside.
+And Just as they are, without any guarantee!!!
