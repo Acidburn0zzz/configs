@@ -1,7 +1,7 @@
 # configs: 
 by that mean: my configs i use on i3-wm
 
-![Bild Text](http://kamprad.net/wp-content/uploads/2016/02/Bildschirmfoto-vom-2017-08-25-03-41-04.png)
+![Bild Text](https://img1.picload.org/image/rwiolocr/killajoe-i3-wm.png)
 
 What i use for i3-wm:
 
