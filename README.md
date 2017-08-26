@@ -32,6 +32,8 @@ geary: https://github.com/GNOME/geary
 
 xfce4-terminal: https://github.com/xfce-mirror/xfce4-terminal
 
+zsh: http://www.zsh.org/  (ZSH_THEME="gnzh") + https://github.com/zsh-users/zsh-syntax-highlighting
+
 lollypop: https://github.com/gnumdk/lollypop
 
 ---
