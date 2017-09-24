@@ -34,7 +34,7 @@ xfce4-terminal: https://github.com/xfce-mirror/xfce4-terminal
 
 zsh: http://www.zsh.org/  (ZSH_THEME="gnzh") + https://github.com/zsh-users/zsh-syntax-highlighting
 
-lollypop: https://github.com/gnumdk/lollypop
+pasystray: https://github.com/christophgysin/pasystray
 
 ---
 All scripts and configs are done by remixing other configs, to use them you need to change directories inside.
