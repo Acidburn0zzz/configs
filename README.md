@@ -37,6 +37,9 @@ zsh: http://www.zsh.org/  (ZSH_THEME="gnzh") + https://github.com/zsh-users/zsh-
 
 pasystray: https://github.com/christophgysin/pasystray
 
+redshift-gtk: http://jonls.dk/redshift/
+
+
 ---
 All scripts and configs are done by remixing other configs, to use them you need to change directories inside.
 And Just as they are, without any guarantee!!!
