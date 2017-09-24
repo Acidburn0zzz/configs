@@ -1,7 +1,7 @@
 # configs: 
 by that mean: my configs i use on i3-wm
 
-[![i3-wm-joekamprad](https://img.youtube.com/vi/Eo89rrKgQ2Y/0.jpg)](https://youtu.be/Eo89rrKgQ2Y)
+[![i3-wm-joekamprad](http://kamprad.net/wp-content/uploads/2017/09/i3wm-24-9-2017.png)](http://kamprad.net/wp-content/uploads/2016/02/i3wm.mkv)
 
 What i use for i3-wm:
 
