@@ -1,7 +1,7 @@
 # configs: 
 by that mean: my configs i use on i3-wm
 
-![Bild Text](https://img1.picload.org/image/rwiolocr/killajoe-i3-wm.png)
+[![Alt text for your video](https://img.youtube.com/vi/Eo89rrKgQ2Y/0.jpg)](https://youtu.be/Eo89rrKgQ2Y)
 
 What i use for i3-wm:
 
