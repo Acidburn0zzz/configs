@@ -97,10 +97,10 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #workspace-edit
-set $ws1 "Antergos "
-set $ws2 "Terminals "
-set $ws3 "Vivaldi "
-set $ws4 "Email "
+set $ws1 "Terminals "
+set $ws2 "Browser "
+set $ws3 "Email "
+set $ws4 "Dateien  "
 
 # switch to workspace
 bindsym $mod+1    workspace  $ws1
@@ -129,29 +129,38 @@ bindsym $mod+Shift+0    move container to workspace  0
 
 # start applications
 #bind program to workspace
-assign [class="Xfce4-terminal"] $ws2
-assign [class="Vivaldi-stable"] $ws3
-assign [class="Geary"] $ws4
-assign [class="Lollypop"] $ws1
+assign [class="Terminator"] $ws1
+assign [class="Vivaldi-stable"] $ws2
+assign [class="Geary"] $ws3
+assign [class="Nautilus"] $ws4
+assign [class="Terminator"] $ws1
 
 #exec --no-startup-id xset m 3/1 3
 
 #exec_always --no-startup-id feh --bg-scale /home/killajoe/Bilder/wall.jpg
 exec --no-startup-id /usr/bin/wallee &
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)
-exec --no-startup-id lollypop
-exec --no-startup-id xfce4-terminal
 exec --no-startup-id vivaldi-stable
 exec --no-startup-id geary
+exec --no-startup-id nautilus
+exec --no-startup-id sleep 2 && terminator
 exec --no-startup-id pamac-tray
 exec --no-startup-id conky -c /home/killajoe/.config/i3/Gotham
-
+#redshift - Berlin Freienwalder und off switcher hack
+#exec --no-startup-id redshift -l 52.55:13.39
+#bindsym F11 exec pkill redshift
+exec --no-startup-id redshift-gtk
+exec --no-startup-id pasystray
 
 #set floating (nontiling) for special apps
 for_window [class="Pamac-manager" instance="pamac-manager"] floating enable
-#for_window [class="Gnome-terminal" instance="gnome-terminal"] floating enable
+for_window [class="Pamac-updater" instance="pamac-updater"] floating enable
+for_window [class="Xfce4-terminal" instance="xfce4-terminal"] floating enable
 #for_window [class="Gedit" instance="gedit"] floating enable
-for_window [class="VirtualBox" instance="VirtualBox"] floating enable
+for_window [class="Empathy" instance="empathy"] floating enable
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [class="Redshiftgui.elf" instance="redshiftgui.elf"] floating enable
+for_window [class="etcher-electron" instance="etcher-electron"] floating enable
 
 #load nvidia-settings
 exec nvidia-settings --config /home/killajoe/.nvidia-settings-rc --load-config-only
@@ -167,8 +176,16 @@ bindsym $mod+Shift+e exec /home/killajoe/.config/i3/scripts/exit_menu
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
+
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Takes a screenshot
+# of the whole screen
+bindsym Print exec gnome-screenshot -i
+# of the focused window
+bindsym Shift+Print exec gnome-screenshot -w
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -327,13 +344,13 @@ bindsym $mod+l exec i3lock -i ~/.config/i3/i3-lock-screen.png -t -f
 
 
 # rofi bindings
-bindsym F9 exec rofi -show drun -lines 10 -eh 3 -width 100 -padding 700 " -bw 0 -opacity "50 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Droid Sans Regular 12"
+bindsym F9 exec rofi -modi drun -show drun -lines 10 -eh 3 -width 100 -padding 700 " -bw 0 -opacity "50 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Droid Sans Regular 12"
 bindsym F10 exec rofi -show run   -lines 3 -eh 2 -width 100 -padding 800 " -bw 0 -opacity "85 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Droid Sans Regular 12"
 bindsym F12 exec rofi -show window -lines 3 -eh 2 -width 100 -padding 800 " -bw 0 -opacity "85 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Droid Sans Regular 12"
 
 
 # move any window to the current workspace
-bindsym F8 exec python3 ~/.config/i3/quickswitch-for-i3/quickswitch.py -m
+#bindsym F8 exec python3 ~/.config/i3/quickswitch-for-i3/quickswitch.py -m
 
 
 popup_during_fullscreen leave_fullscreen
