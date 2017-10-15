@@ -16,13 +16,9 @@ rofi: https://github.com/DaveDavenport/rofi
 
 i3lock: https://github.com/i3/i3lock
 
-pactl: https://github.com/pulseaudio/pulseaudio/blob/master/src/utils/pactl.
-
 i3blocks: https://github.com/vivien/i3blocks
 
 awesome font: http://fontawesome.io
-
-conky: https://github.com/brndnmtthws/conky
 
 pamac: https://github.com/manjaro/pamac
 
@@ -36,7 +32,7 @@ terminator: https://code.launchpad.net/~gnome-terminator/terminator/gtk3
 
 zsh: http://www.zsh.org/  (ZSH_THEME="gnzh") + https://github.com/zsh-users/zsh-syntax-highlighting
 
-pasystray: https://github.com/christophgysin/pasystray
+pavucontrol: https://freedesktop.org/software/pulseaudio/pavucontrol/ 
 
 redshift-gtk: http://jonls.dk/redshift/
 
