@@ -26,8 +26,14 @@ client.urgent           #2f343a #900000 #ffffff #900000
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-# font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 15
 font pango:Droid Sans Regular 10
+#font pango:Merriweather Sans Regular 10
+
+#i3-gnome
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -135,22 +141,20 @@ assign [class="Geary"] $ws3
 assign [class="Nautilus"] $ws4
 assign [class="Terminator"] $ws1
 
-#exec --no-startup-id xset m 3/1 3
 
-#exec_always --no-startup-id feh --bg-scale ~/Bilder/wall.jpg
-exec --no-startup-id /usr/bin/wallee &
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)
+exec_always --no-startup-id feh --bg-scale ~/antergos-background.png
+#exec --no-startup-id /usr/bin/wallee &
 exec --no-startup-id vivaldi-stable
 exec --no-startup-id geary
 exec --no-startup-id nautilus
 exec --no-startup-id sleep 2 && terminator
 exec --no-startup-id pamac-tray
-exec --no-startup-id conky -c ~/.config/i3/Gotham
+#exec --no-startup-id conky -c ~/.config/i3/Gotham
 #redshift - Berlin Freienwalder und off switcher hack
 #exec --no-startup-id redshift -l 52.55:13.39
 #bindsym F11 exec pkill redshift
 exec --no-startup-id redshift-gtk
-exec --no-startup-id pasystray
+#exec --no-startup-id pasystray
 
 #set floating (nontiling) for special apps
 for_window [class="Pamac-manager" instance="pamac-manager"] floating enable
@@ -161,6 +165,9 @@ for_window [class="Empathy" instance="empathy"] floating enable
 for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="Redshiftgui.elf" instance="redshiftgui.elf"] floating enable
 for_window [class="etcher-electron" instance="etcher-electron"] floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+for_window [class="Gnome-control-center" instance="gnome-control-center"] floating enable
+
 
 #load nvidia-settings
 exec nvidia-settings --config ~/.nvidia-settings-rc --load-config-only
@@ -365,3 +372,4 @@ bindsym $mod+y fullscreen disable; floating enable; resize set 422 240; sticky e
 # chrome extension popups
 for_window [instance="^crx.*$" window_role="pop-up"]  floating enable
 for_window [instance="^crx.*$" window_role="pop-up"]  sticky   enable
+
