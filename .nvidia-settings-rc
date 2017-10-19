@@ -2,7 +2,7 @@
 # /home/killajoe/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Thu Aug 17 23:02:48 2017
+# Generated on Tue Oct 17 14:12:36 2017
 #
 
 # ConfigProperties:
@@ -13,9 +13,9 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = Yes
 UpdateRulesOnProfileNameChange = Yes
-Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
 Timer = Memory_Used_(GPU_0),Yes,3000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 
 # Attributes:
 
@@ -24,7 +24,7 @@ Timer = Memory_Used_(GPU_0),Yes,3000
 0/FSAA=0
 0/TextureClamping=0
 0/FXAA=0
-0/AllowFlipping=1
+0/AllowFlipping=0
 0/FSAAAppControlled=0
 0/LogAnisoAppControlled=1
 0/OpenGLImageSettings=1
@@ -52,7 +52,7 @@ Timer = Memory_Used_(GPU_0),Yes,3000
 [DPY:HDMI-0]/Dithering=0
 [DPY:HDMI-0]/DitheringMode=0
 [DPY:HDMI-0]/DitheringDepth=0
-[DPY:HDMI-0]/DigitalVibrance=0
-[DPY:HDMI-0]/ColorSpace=0
+[DPY:HDMI-0]/DigitalVibrance=-561
+[DPY:HDMI-0]/ColorSpace=2
 [DPY:HDMI-0]/ColorRange=0
 [DPY:HDMI-0]/SynchronousPaletteUpdates=0
