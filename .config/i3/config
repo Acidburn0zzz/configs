@@ -31,7 +31,7 @@ font pango:Droid Sans Regular 10
 #font pango:Merriweather Sans Regular 10
 
 #i3-gnome
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id gnome-power-manager
 
@@ -144,22 +144,18 @@ assign [class="Terminator"] $ws1
 
 exec_always --no-startup-id feh --bg-scale ~/antergos-background.png
 #exec --no-startup-id /usr/bin/wallee &
-exec --no-startup-id vivaldi-stable
-exec --no-startup-id geary
-exec --no-startup-id nautilus
+exec --no-startup-id sleep 4 && vivaldi-stable
+exec --no-startup-id sleep 3 && geary
+exec --no-startup-id sleep 6 && nautilus
 exec --no-startup-id sleep 2 && terminator
-exec --no-startup-id pamac-tray
-#exec --no-startup-id conky -c ~/.config/i3/Gotham
-#redshift - Berlin Freienwalder und off switcher hack
-#exec --no-startup-id redshift -l 52.55:13.39
-#bindsym F11 exec pkill redshift
-exec --no-startup-id redshift-gtk
-#exec --no-startup-id pasystray
+exec --no-startup-id sleep 5 && pamac-tray
+exec --no-startup-id sleep 1 && redshift-gtk
 
 #set floating (nontiling) for special apps
 for_window [class="Pamac-manager" instance="pamac-manager"] floating enable
 for_window [class="Pamac-updater" instance="pamac-updater"] floating enable
 for_window [class="Xfce4-terminal" instance="xfce4-terminal"] floating enable
+for_window [class="Gnome-terminal" instance="gnome-terminal"] floating enable
 #for_window [class="Gedit" instance="gedit"] floating enable
 for_window [class="Empathy" instance="empathy"] floating enable
 for_window [class="Xsane" instance="xsane"] floating enable
@@ -171,6 +167,7 @@ for_window [class="Gnome-control-center" instance="gnome-control-center"] floati
 
 #load nvidia-settings
 exec nvidia-settings --config ~/.nvidia-settings-rc --load-config-only
+exec nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 
 #transparency
 #exec --no-startup-id compton -cCfb
