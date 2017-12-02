@@ -6,9 +6,7 @@ by that mean: my configs i use on i3-wm
 
 What i use for i3-wm:
 
-i3-wm: https://i3wm.org/ + i3-gnome: https://github.com/lvillani/i3-gnome/
-
-wallee: https://github.com/K-ratos/wallee
+i3-wm: https://i3wm.org/ + i3-gnome-git: https://github.com/mephux/i3-gnome
 
 my wallpapers: http://kamprad.net/backgrounds/
 
