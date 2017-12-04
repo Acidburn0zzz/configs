@@ -39,6 +39,7 @@ redshift-gtk: http://jonls.dk/redshift/
 **Creating packages lists:**
 
 `pacman -Qqen > packages-repository.txt`
+
 `pacman -Qqem > packages-AUR.txt`
 
 **restore this:**
