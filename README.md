@@ -34,6 +34,18 @@ pavucontrol: https://freedesktop.org/software/pulseaudio/pavucontrol/
 
 redshift-gtk: http://jonls.dk/redshift/
 
+**As i am on Antergos (Based on Archlinux) i provide package list and AUR list and the commands to create and install:**
+
+**Creating packages lists:**
+
+`pacman -Qqen > packages-repository.txt`
+`pacman -Qqem > packages-AUR.txt`
+
+**restore this:**
+
+`pacman --needed -S - < packages-repository.txt`
+
+`cat packages-AUR.txt | xargs yaourt -S --needed --noconfirm`
 
 ---
 All scripts and configs are done by remixing other configs, to use them you need to change directories inside.
