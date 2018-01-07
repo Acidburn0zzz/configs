@@ -34,6 +34,8 @@ font pango:Droid Sans Regular 10
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 #exec_always --no-startup-id gnome-power-manager
+#dual-monitor-setup
+#exec --no-startup-id xrandr --output HDMI-0 --primary --mode 1920x1080 --rate 60.00 --output VGA-0 --mode 1024x768 --left-of HDMI-0
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -142,15 +144,15 @@ assign [class="Nautilus"] $ws4
 assign [class="Terminator"] $ws1
 
 
-exec_always --no-startup-id feh --bg-scale ~/Bilder/wallpaper/osman-rana-267042.jpg
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/quallen-1920x1080.png
 #exec --no-startup-id /usr/bin/wallee &
-exec --no-startup-id sleep 4 && vivaldi-stable
+exec --no-startup-id sleep 3 && vivaldi-stable
 exec --no-startup-id geary
-exec --no-startup-id sleep 6 && nautilus
-exec --no-startup-id sleep 2 && terminator
-#exec --no-startup-id pamac-tray
-exec --no-startup-id sleep 1 && redshift-gtk
-#exec --no-startup-id sleep 10 && unison -auto -batch killajoe-home
+exec --no-startup-id sleep 2 && nautilus
+exec --no-startup-id sleep 1 && terminator
+#exec --no-startup-id sleep 3 && pamac-user-daemon &
+#exec --no-startup-id sleep 1 && redshift-gtk
+exec --no-startup-id pacman -Qqen > ~/packages-repository.txt && pacman -Qqem > ~/packages-AUR.txt
 
 #set floating (nontiling) for special apps
 for_window [class="Pamac-manager" instance="pamac-manager"] floating enable
@@ -167,9 +169,8 @@ for_window [class="Gnome-control-center" instance="gnome-control-center"] floati
 
 
 #load nvidia-settings
-exec nvidia-settings --config ~/.nvidia-settings-rc --load-config-only
+exec nvidia-settings --load-config-only
 exec nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
-
 #transparency
 #exec --no-startup-id compton -cCfb
 exec --no-startup-id compton --config ~/.config/compton.conf -b
