@@ -32,7 +32,6 @@ zsh: http://www.zsh.org/  (ZSH_THEME="gnzh") + https://github.com/zsh-users/zsh-
 
 pavucontrol: https://freedesktop.org/software/pulseaudio/pavucontrol/ 
 
-redshift-gtk: http://jonls.dk/redshift/
 
 **As i am on Antergos (Based on Archlinux) i provide package list and AUR list and the commands to create and install:**
 
