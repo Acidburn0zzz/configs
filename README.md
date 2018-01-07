@@ -28,7 +28,7 @@ xfce4-terminal: https://github.com/xfce-mirror/xfce4-terminal
 
 terminator: https://code.launchpad.net/~gnome-terminator/terminator/gtk3
 
-zsh: http://www.zsh.org/  (ZSH_THEME="gnzh") + https://github.com/zsh-users/zsh-syntax-highlighting
+zsh: http://www.zsh.org/  (ZSH_THEME="agnoster") + https://github.com/zsh-users/zsh-syntax-highlighting
 
 pavucontrol: https://freedesktop.org/software/pulseaudio/pavucontrol/ 
 
