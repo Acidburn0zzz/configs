@@ -1,0 +1,82 @@
+[global_config]
+  borderless = True
+  enabled_plugins = InactivityWatch, CustomCommandsMenu, TestPlugin, ActivityWatch, TerminalShot, APTURLHandler, LaunchpadCodeURLHandler, Logger, MavenPluginURLHandler, LaunchpadBugURLHandler
+  geometry_hinting = True
+  handle_size = 0
+  tab_position = hidden
+  title_font = xos4 Terminus 10
+  title_hide_sizetext = True
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = a79e1792-1b6e-43f4-bec9-8ae4fecc5aa2
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:20
+      size = 1918, 1038
+      title = netstat -t -c
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 1011
+      ratio = 0.528489283847
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 517
+      ratio = 0.500484027106
+      type = VPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 517
+      ratio = 0.500484027106
+      type = VPaned
+    [[[terminal3]]]
+      command = glances
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = c1122ad1-5cf6-4235-ac53-172e896882ee
+    [[[terminal4]]]
+      command = netstat -etcoa
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = a79e1792-1b6e-43f4-bec9-8ae4fecc5aa2
+    [[[terminal6]]]
+      command = journalctl -f
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = f4e11855-c6ad-43a7-ad83-8a4733da5ddc
+    [[[terminal7]]]
+      command = ""
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 6396254b-b6fd-4cc9-9d93-a5c2e4079d78
+[plugins]
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_darkness = 0.39
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = xos4 Terminus 9
+    foreground_color = "#ffffff"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+    visible_bell = True
