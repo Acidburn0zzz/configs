@@ -106,16 +106,17 @@ bindsym XF86AudioPrev exec playerctl previous
 
 #workspace-edit
 set $ws1 "Terminals "
-set $ws2 "Browser "
+set $ws2 "Browser "
 set $ws3 "Email "
 set $ws4 "Dateien  "
+set $ws5 "Musik  "
 
 # switch to workspace
 bindsym $mod+1    workspace  $ws1
 bindsym $mod+2    workspace  $ws2
 bindsym $mod+3    workspace  $ws3
 bindsym $mod+4    workspace  $ws4
-bindsym $mod+5    workspace  5
+bindsym $mod+5    workspace  $ws5
 bindsym $mod+6    workspace  6
 bindsym $mod+7    workspace  7
 bindsym $mod+8    workspace  8
@@ -128,7 +129,7 @@ bindsym $mod+Shift+1    move container to workspace  $ws1
 bindsym $mod+Shift+2    move container to workspace  $ws2
 bindsym $mod+Shift+3    move container to workspace  $ws3
 bindsym $mod+Shift+4    move container to workspace  $ws4
-bindsym $mod+Shift+5    move container to workspace  5
+bindsym $mod+Shift+5    move container to workspace  $ws5
 bindsym $mod+Shift+6    move container to workspace  6
 bindsym $mod+Shift+7    move container to workspace  7
 bindsym $mod+Shift+8    move container to workspace  8
@@ -142,6 +143,7 @@ assign [class="Vivaldi-stable"] $ws2
 assign [class="Geary"] $ws3
 assign [class="Nautilus"] $ws4
 assign [class="Terminator"] $ws1
+assign [class="Clementine"] $ws5
 
 
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/quallen-1920x1080.png
@@ -153,6 +155,7 @@ exec --no-startup-id sleep 1 && terminator
 #exec --no-startup-id sleep 3 && pamac-user-daemon &
 #exec --no-startup-id sleep 1 && redshift-gtk
 exec --no-startup-id pacman -Qqen > ~/packages-repository.txt && pacman -Qqem > ~/packages-AUR.txt
+exec --no-startup-id clementine
 
 #set floating (nontiling) for special apps
 for_window [class="Pamac-manager" instance="pamac-manager"] floating enable

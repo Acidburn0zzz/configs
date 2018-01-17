@@ -27,8 +27,8 @@ if [[ "${TOTAL_COUNT}" -gt 1 ]]; then
 fi
 
 echo "${AVERAGE_TEMP}°C"
-echo "${AVERAGE_TEMP}°C"
-echo ""
+#echo "${AVERAGE_TEMP}°C"
+#echo ""
 
 if [[ "${IS_URGENT}" -eq 1 ]]; then
   exit 33
